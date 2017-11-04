@@ -9,7 +9,7 @@ class PosterList extends Component {
     lists:[]
   };
   componentWillMount(){
-    axios.get('https://jsonplaceholder.typicode.com/comments')
+    axios.get('https://jsonplaceholder.typicode.com/comments?postId=1')
       .then(response => this.setState({lists: response.data}));
   }
   renderList(){
