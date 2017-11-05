@@ -22,7 +22,9 @@ const PosterDetail = (props) =>{
       </CardSection>
       <CardSection>
         <View>
-        <Comments whenPress={() => console.log(props.list.email)}/>
+        <Comments whenPress={() => {console.log(props.list.email)}} >
+        {props.list.email}
+        </Comments>
         </View>
       </CardSection>
     </Card>

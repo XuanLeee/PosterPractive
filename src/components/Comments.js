@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 
-const Comments = ({whenPress}) =>{
-    return (
+const Comments = ({ whenPress, children }) =>{
+    return(
         <TouchableOpacity
         onPress={whenPress }
         >
           <View style={styles.commentStyle}>
-            <Text> Hide Comments </Text>
+            <Text> {children} </Text>
             <Image style={styles.imageStyle}
             source={require('./../image/download.png')}
             />
