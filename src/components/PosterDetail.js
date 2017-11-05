@@ -3,6 +3,8 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Stars from './Stars';
+import Comments from './Comments';
 
 const PosterDetail = (props) =>{
   return (
@@ -15,29 +17,11 @@ const PosterDetail = (props) =>{
       </CardSection>
       <CardSection>
         <View style={styles.headerContentStyle}>
-          <Image style={styles.imageStyle}
-          source={require('./../image/star_empty.png')}
-          />
-          <Image style={styles.imageStyle}
-          source={require('./../image/star_empty.png')}
-          />
-          <Image style={styles.imageStyle}
-          source={require('./../image/star_empty.png')}
-          />
-          <Image style={styles.imageStyle}
-          source={require('./../image/star_empty.png')}
-          />
-          <Image style={styles.imageStyle}
-          source={require('./../image/star_empty.png')}
-          />
-
+          <Stars />
         </View>
       </CardSection>
       <CardSection>
-        <Text> Hide Comments </Text>
-        <Image style={styles.imageStyle}
-        source={require('./../image/download.png')}
-        />
+        <Comments />
       </CardSection>
     </Card>
   );
