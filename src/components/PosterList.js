@@ -1,6 +1,6 @@
 
 import React, { Component} from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import axios from 'axios';
 import PosterDetail from './PosterDetail';
 
@@ -20,9 +20,9 @@ class PosterList extends Component {
   render(){
     console.log(this.state);
     return(
-      <View>
+      <ScrollView>
         {this.renderList()}
-      </View>
+      </ScrollView>
     );
   }
 }

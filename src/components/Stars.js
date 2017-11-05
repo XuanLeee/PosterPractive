@@ -4,25 +4,28 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 
 class Stars extends Component{
 
+  changeStar(){
+
+  }
   render(){
 
     return (
       <View style={styles.starStyle}>
-      <Image style={styles.imageStyle}
-      source={require('./../image/star_empty.png')}
-      />
-      <Image style={styles.imageStyle}
-      source={require('./../image/star_empty.png')}
-      />
-      <Image style={styles.imageStyle}
-      source={require('./../image/star_empty.png')}
-      />
-      <Image style={styles.imageStyle}
-      source={require('./../image/star_empty.png')}
-      />
-      <Image style={styles.imageStyle}
-      source={require('./../image/star_empty.png')}
-      />
+        <Image style={styles.imageStyle}
+        source={require('./../image/star_empty.png')}
+        />
+        <Image style={styles.imageStyle}
+        source={require('./../image/star_empty.png')}
+        />
+        <Image style={styles.imageStyle}
+        source={require('./../image/star_empty.png')}
+        />
+        <Image style={styles.imageStyle}
+        source={require('./../image/star_empty.png')}
+        />
+        <Image style={styles.imageStyle}
+        source={require('./../image/star_empty.png')}
+        />
       </View>
     );
   }
