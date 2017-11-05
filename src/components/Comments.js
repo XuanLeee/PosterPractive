@@ -1,21 +1,22 @@
 
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-class Comments extends Component{
 
-  render(){
-
+const Comments = ({whenPress}) =>{
     return (
-      <View style={styles.commentStyle}>
-        <Text> Hide Comments </Text>
-        <Image style={styles.imageStyle}
-        source={require('./../image/download.png')}
-      />
-      </View>
+        <TouchableOpacity
+        onPress={whenPress }
+        >
+          <View style={styles.commentStyle}>
+            <Text> Hide Comments </Text>
+            <Image style={styles.imageStyle}
+            source={require('./../image/download.png')}
+            />
+          </View>
+        </TouchableOpacity>
     );
-  }
-}
+};
 
 
 
@@ -27,7 +28,6 @@ const styles = StyleSheet.create({
     height:15,
     width:15,
   },
-
 });
 
 export default Comments;
