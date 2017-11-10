@@ -1,31 +1,39 @@
 
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, TouchableHighlight } from 'react-native';
+
 
 class Stars extends Component{
 
-  changeStar(){
+  starChange(){
 
+    if(this.props.star){
+      return(
+        <Image style={ styles.imageStyle }
+        source={ require('./../image/star_empty.png')}
+         />
+    );
   }
+   return (
+     <Image style={ styles.imageStyle }
+     source={ require('./../image/star.png')}
+      />
+   );
+}
+
+
   render(){
 
     return (
       <View style={styles.starStyle}>
-        <Image style={styles.imageStyle}
-        source={require('./../image/star_empty.png')}
-        />
-        <Image style={styles.imageStyle}
-        source={require('./../image/star_empty.png')}
-        />
-        <Image style={styles.imageStyle}
-        source={require('./../image/star_empty.png')}
-        />
-        <Image style={styles.imageStyle}
-        source={require('./../image/star_empty.png')}
-        />
-        <Image style={styles.imageStyle}
-        source={require('./../image/star_empty.png')}
-        />
+
+        <TouchableOpacity onPress = { this.props.whenPress} >
+
+              {this.starChange()}
+
+        </TouchableOpacity>
+
+
       </View>
     );
   }
